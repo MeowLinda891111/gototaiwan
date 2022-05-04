@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>東南亞地區2016年來台旅客人數</title>
+</head>
+
+<style>
+</style>
+
+
+
+<body>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+</figure>
+
+
+
+<script>
+	Highcharts.chart('container', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: '東南亞地區2016年來台旅客人數'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+      }
+    }
+  },
+  series: [{
+    name: '馬來西亞',
+    colorByPoint: true,
+    data: [{
+      name: '印尼',
+      y: 9,
+      sliced: true,
+      selected: true
+    }, {
+      name: '新加坡',
+      y: 16
+    }, {
+      name: '菲律賓',
+      y: 20
+    }, {
+      name: '泰國',
+      y: 16
+    }, {
+      name: '越南',
+      y: 16
+    }, {
+      name: '馬來西亞',
+      y: 22
+    }, {name: '其他',
+      y: 1
+    }]
+  }]
+});
+	</script>
+</body>
+</html>
